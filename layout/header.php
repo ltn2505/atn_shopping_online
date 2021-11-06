@@ -40,7 +40,7 @@
                   <a class="nav-link" href="#">Hot Sale</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link" href="#">Cart</a>
+                  <a class="nav-link" href="test.php">Test</a>
                </li>
             </ul>
             
