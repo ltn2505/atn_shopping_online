@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,9 @@
 </head>
 <body>
     <?php
+   
         include_once("layout/header.php");
+       
     ?>
     
 
