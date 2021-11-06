@@ -6,7 +6,7 @@
     }
      
     //Nhúng file kết nối với database
-    include_once('../connection.php');
+    include_once('../connect.php');
           
     //Khai báo utf-8 để hiển thị được tiếng việt
     header('Content-Type: text/html; charset=UTF-8');

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="">
 </head>
 <?php
-    include_once("connection.php");
+    include_once("connect.php");
 ?>
 <body>
     <table width="500" border="1" >
