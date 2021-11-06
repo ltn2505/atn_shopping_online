@@ -23,7 +23,7 @@
         <tbody>
         <?php
             $id=1;
-            $result=pg_query($conn,"SELCET * FROM public.user");
+            $result=pg_query($conn,"SELCET * FROM user");
             while($row=pg_fetch_array($result,NULL, PGSQL_ASSOC))
             {
             ?>
