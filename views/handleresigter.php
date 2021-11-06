@@ -21,7 +21,6 @@
     
     $result=pg_query($conn,"INSERT INTO public.user(user_name,password,full_name,email,phone,address) VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$phone}','{$address}')");
 
-   
     if ($result)
         echo "Quá trình đăng ký thành công. <a href='../test.php'>Về trang chủ</a>";
     else

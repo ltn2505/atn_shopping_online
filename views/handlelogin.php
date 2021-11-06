@@ -31,9 +31,8 @@ if (isset($_POST['dangnhap']))
         exit;
     }
      
-    //Lưu tên đăng nhập
-    $_SESSION['user_name'] = $username;
-    echo "Xin chào " . $username . ". Bạn đã đăng nhập thành công. <a href='/'>Về trang chủ</a>";
-    die();
+    
+    header("Location: ../index.php");
+    exit;
 }
 ?>
