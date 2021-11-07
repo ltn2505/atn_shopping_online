@@ -28,7 +28,7 @@
                         <a class="nav-link" href="">Hot sale</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="test.php">Customer</a>
+                        <a class="nav-link" href="?page=test">Customer</a>
                     </li>
                 </ul>
                 <!-- Right -->

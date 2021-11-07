@@ -1,6 +1,4 @@
 <?php
-//Khai báo utf-8 để hiển thị được tiếng việt
-header('Content-Type: text/html; charset=UTF-8');
 
 //Xử lý đăng nhập
 if (isset($_POST['dangnhap'])) {
@@ -12,7 +10,7 @@ if (isset($_POST['dangnhap'])) {
     $password = addslashes($_POST['txtPassword']);
 
     //Kiểm tra tên đăng nhập có tồn tại không
-    $result = pg_query($conn, "SELECT user_name, password FROM public.user WHERE user_name='{$username}'");
+    $result = pg_query($conn, "SELECT user_name, password,state FROM public.user WHERE user_name='{$username}'");
     if (pg_num_rows($result) == 0) {
         echo "Tên đăng nhập này không tồn tại. Vui lòng kiểm tra lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
@@ -29,8 +27,9 @@ if (isset($_POST['dangnhap'])) {
 
     if (pg_num_rows($result) == 1) {
         $_SESSION["user_name"] = $username;
-        //$_SESSION["admin"]=$row["state"];
-        echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+        $_SESSION["admin"] = $row['state'];
+        //echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
+        echo "thanh conh";
     } else {
         echo "You loged in fail!";
     }

@@ -1,3 +1,29 @@
+<?php
+
+// Nếu là sự kiện đăng ký thì xử lý
+if (isset($_POST['dangky'])) {
+
+    //Nhúng file kết nối với database
+    include_once('./connect.php');
+
+
+    //Lấy dữ liệu từ file dangky.php
+    $username   = addslashes($_POST['txtUsername']);
+    $password   = addslashes($_POST['txtPassword']);
+    $fullname   = addslashes($_POST['txtFullname']);
+    $email      = addslashes($_POST['txtEmail']);
+    $phone   = addslashes($_POST['txtPhone']);
+    $address       = addslashes($_POST['txtAddress']);
+
+    $result = pg_query($conn, "INSERT INTO public.user(user_name,password,full_name,email,phone,address,state) VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$phone}','{$address}',0)");
+
+    if ($result) {
+        echo "Quá trình đăng ký thành công. <a href='test.php'>Về trang chủ</a>";
+    } else
+        echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -38,36 +64,6 @@
             <button type="submit" name="dangky" class="btn btn-primary">Submit</button>
         </form>
     </div>
-    <?php
-    include_once("views/footer.php")
-    ?>
 </body>
 
 </html>
-
-<?php
-
-// Nếu không phải là sự kiện đăng ký thì không xử lý
-if (!isset($_POST['dangky'])) {
-    die('');
-}
-
-//Nhúng file kết nối với database
-include_once('./connect.php');
-
-
-//Lấy dữ liệu từ file dangky.php
-$username   = addslashes($_POST['txtUsername']);
-$password   = addslashes($_POST['txtPassword']);
-$fullname   = addslashes($_POST['txtFullname']);
-$email      = addslashes($_POST['txtEmail']);
-$phone   = addslashes($_POST['txtPhone']);
-$address       = addslashes($_POST['txtAddress']);
-
-$result = pg_query($conn, "INSERT INTO public.user(user_name,password,full_name,email,phone,address,state) VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$phone}','{$address}',0)");
-
-if ($result) {
-    echo "Quá trình đăng ký thành công. <a href='test.php'>Về trang chủ</a>";
-} else
-    echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
-?>

@@ -25,6 +25,8 @@
             include_once("views/login.php");
         } elseif ($page == "logout") {
             include_once("views/logout.php");
+        } elseif ($page == "test") {
+            include_once("test.php");
         }
     } else {
         include_once("views/home.php");
