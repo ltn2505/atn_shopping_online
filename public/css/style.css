@@ -72,6 +72,11 @@ table {
     margin-top: 50px;
     margin-bottom: 100px;
 }
+.btn-success .search{
+    color: #fff;
+    background-color: #e97a3a !important;
+    border-color: #ffffff !important;
+}
 .cot{
    
     width: 100%;

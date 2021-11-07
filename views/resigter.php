@@ -18,7 +18,8 @@ if (isset($_POST['dangky'])) {
     $result = pg_query($conn, "INSERT INTO public.user(user_name,password,full_name,email,phone,address,state) VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$phone}','{$address}',0)");
 
     if ($result) {
-        echo "Quá trình đăng ký thành công. <a href='test.php'>Về trang chủ</a>";
+        echo "Quá trình đăng ký thành công.";
+        echo '<meta http-equiv="refresh" content="0;URL=?page=login"/>';
     } else
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
 }
@@ -59,9 +60,8 @@ if (isset($_POST['dangky'])) {
                 <label for="exampleInputEmail1">Address</label>
                 <input type="text" name="txtAddress" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ca Mau">
             </div>
-
-            <button type="reset" class="btn btn-primary" value="Submit">Reset</button>
             <button type="submit" name="dangky" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-primary" value="Submit">Reset</button>
         </form>
     </div>
 </body>

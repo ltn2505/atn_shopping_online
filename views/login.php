@@ -28,8 +28,8 @@ if (isset($_POST['dangnhap'])) {
     if (pg_num_rows($result) == 1) {
         $_SESSION["user_name"] = $username;
         $_SESSION["admin"] = $row['state'];
-        //echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
-        echo "thanh conh";
+        echo"thanh cong";
+        echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
     } else {
         echo "You loged in fail!";
     }
