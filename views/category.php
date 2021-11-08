@@ -1,3 +1,14 @@
+<?php
+include_once("connect.php");
+
+if (isset($_GET["function"]) == "del") {
+    if (isset($_GET["id"])) {
+        $id = $_GET["id"];
+        pg_query($conn, "delete from category where cate_id='$id'");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +46,7 @@
                         <td><?php echo $row["description"]; ?></td>
                         <td>
                             <button><a href="">Edit</a></button>
-                            <button><a onClick="return confirm ('Are you sure delete')" a href="">Delete</a></button>
+                            <button><a href="?page=category&&function=del&&id=<?php echo $row["cate_id"]; ?>" onClick="return confirm ('Are you sure delete')">Delete</a></button>
                         </td>
                     </tr>
                 <?php $id++;

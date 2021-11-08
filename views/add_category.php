@@ -1,4 +1,5 @@
 <?php
+
 // Nếu là sự kiện đăng ký thì xử lý
 if (isset($_POST['addnew'])) {
 
