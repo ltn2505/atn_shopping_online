@@ -36,10 +36,12 @@
             include_once("views/store.php");
         } elseif ($page == "add_store") {
             include_once("views/add_store.php");
-        }elseif ($page == "product") {
+        } elseif ($page == "product") {
             include_once("views/product.php");
-        }elseif ($page == "add_product") {
+        } elseif ($page == "add_product") {
             include_once("views/add_product.php");
+        } elseif ($page == "search") {
+            include_once("views/search.php");
         }
     } else {
         include_once("views/home.php");
@@ -51,4 +53,5 @@
     ?>
 
 </body>
+
 </html>

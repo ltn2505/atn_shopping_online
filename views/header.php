@@ -39,9 +39,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="?page=product">Product</a>
                     </li>
-                    <form class="form-inline" action="" method="">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                        <button class="btn btn-success search" type="submit" style=" background-color: #e97a3a; border-color: #ffffff;">Search</button>
+                    <form class="form-inline" action="?page=search" method="POST">
+                        <input class="form-control mr-sm-2" type="text" name="txtSearch" placeholder="Search">
+                        <button class="btn btn-success search" type="submit" name="search" style=" background-color: #e97a3a; border-color: #ffffff;">Search</button>
                     </form>
                 </ul>
                 <!-- Right -->
