@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 
@@ -30,6 +30,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="?page=test">Customer</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?page=category">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?page=store">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?page=product">Product</a>
+                    </li>
                     <form class="form-inline" action="" method="">
                         <input class="form-control mr-sm-2" type="text" placeholder="Search">
                         <button class="btn btn-success search" type="submit" style=" background-color: #e97a3a; border-color: #ffffff;">Search</button>
@@ -40,6 +49,7 @@
                     <?php
                     if (isset($_SESSION['user_name']) && $_SESSION['user_name'] != "") {
                     ?>
+
                         <li class="nav-item">
                             <a class="nav-link" href="views/resigter.php">Hi! <?php echo $_SESSION['user_name'] ?></a>
                         </li>

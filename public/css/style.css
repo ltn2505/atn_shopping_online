@@ -64,8 +64,8 @@ a {
 }
 table {
     border-collapse: collapse;
-    margin-top: 100px;
-    margin-bottom: 151px;
+    margin-top: 50px !important;
+    margin-bottom: 100px;
     width: 100%;
 }
 .container{

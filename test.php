@@ -22,6 +22,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
     <body>
         <table width="500" border="1">
             <tr>
+                <th><strong>No.</strong></th>
                 <th><strong>User Name</strong></th>
                 <th><strong>Password</strong></th>
                 <th><strong>Full Name</strong></th>
@@ -36,6 +37,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                 while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
                 ?>
                     <tr>
+                        <td><?php echo $id; ?></td>
                         <td><?php echo $row["user_name"]; ?></td>
                         <td><?php echo $row["password"]; ?></td>
                         <td><?php echo $row["full_name"]; ?></td>

@@ -28,6 +28,18 @@
             include_once("views/logout.php");
         } elseif ($page == "test") {
             include_once("test.php");
+        } elseif ($page == "category") {
+            include_once("views/category.php");
+        } elseif ($page == "add_category") {
+            include_once("views/add_category.php");
+        } elseif ($page == "store") {
+            include_once("views/store.php");
+        } elseif ($page == "add_store") {
+            include_once("views/add_store.php");
+        }elseif ($page == "product") {
+            include_once("views/product.php");
+        }elseif ($page == "add_product") {
+            include_once("views/add_product.php");
         }
     } else {
         include_once("views/home.php");
@@ -39,5 +51,4 @@
     ?>
 
 </body>
-
 </html>

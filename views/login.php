@@ -1,5 +1,4 @@
 <?php
-
 //Xử lý đăng nhập
 if (isset($_POST['dangnhap'])) {
     //Kết nối tới database
@@ -15,7 +14,6 @@ if (isset($_POST['dangnhap'])) {
         echo "Tên đăng nhập này không tồn tại. Vui lòng kiểm tra lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
         exit;
     }
-
     //Lấy mật khẩu trong database ra
     $row = pg_fetch_array($result);
 
@@ -28,7 +26,7 @@ if (isset($_POST['dangnhap'])) {
     if (pg_num_rows($result) == 1) {
         $_SESSION["user_name"] = $username;
         $_SESSION["admin"] = $row['state'];
-        echo"thanh cong";
+        echo "thanh cong";
         echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
     } else {
         echo "You loged in fail!";
@@ -52,7 +50,7 @@ if (isset($_POST['dangnhap'])) {
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" name="txtPassword" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <input type="password" name="txtPassword" class="form-control" id="exampleInputPassword" placeholder="Password">
             </div>
             <button type="submit" class="btn btn-primary" name="dangnhap" value="Submit">Submit</button>
 

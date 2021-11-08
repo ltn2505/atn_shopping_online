@@ -1,25 +1,23 @@
 <?php
-
 // Nếu là sự kiện đăng ký thì xử lý
 if (isset($_POST['dangky'])) {
 
     //Nhúng file kết nối với database
     include_once('./connect.php');
 
-
-    //Lấy dữ liệu từ file dangky.php
-    $username   = addslashes($_POST['txtUsername']);
-    $password   = addslashes($_POST['txtPassword']);
-    $fullname   = addslashes($_POST['txtFullname']);
-    $email      = addslashes($_POST['txtEmail']);
-    $phone   = addslashes($_POST['txtPhone']);
-    $address       = addslashes($_POST['txtAddress']);
+    //Lấy dữ liệu từ file 
+    $username   = $_POST['txtUsername'];
+    $password   = $_POST['txtPassword'];
+    $fullname   = $_POST['txtFullname'];
+    $email      = $_POST['txtEmail'];
+    $phone   = $_POST['txtPhone'];
+    $address       = $_POST['txtAddress'];
 
     $result = pg_query($conn, "INSERT INTO public.user(user_name,password,full_name,email,phone,address,state) VALUES ('{$username}','{$password}','{$fullname}','{$email}','{$phone}','{$address}',0)");
 
     if ($result) {
         echo "Quá trình đăng ký thành công.";
-        echo '<meta http-equiv="refresh" content="0;URL=?page=login"/>';
+        echo '<meta http-equiv="refresh" content="0;URL=?page=index"/>';
     } else
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
 }
