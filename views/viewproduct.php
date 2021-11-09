@@ -15,7 +15,7 @@ include_once("connect.php");
 
 <body>
     <div class="container">
-        <h1>Product Manage</h1>
+        <h1>Product New</h1>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>

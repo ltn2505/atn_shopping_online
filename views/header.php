@@ -72,7 +72,7 @@
                     } else {
                     ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="?page=resigter">Resigter</a>
+                            <a class="nav-link" href="?page=resigter">Register</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="?page=login">Login</a>
