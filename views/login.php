@@ -30,6 +30,7 @@ if (isset($_POST['dangnhap'])) {
         echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
     } else {
         echo "You loged in fail!";
+        echo '<meta http-equiv="refresh" content="0;URL=?page=login"/>';
     }
 }
 ?>

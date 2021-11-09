@@ -26,8 +26,8 @@
             include_once("views/login.php");
         } elseif ($page == "logout") {
             include_once("views/logout.php");
-        } elseif ($page == "test") {
-            include_once("test.php");
+        } elseif ($page == "user") {
+            include_once("views/user.php");
         } elseif ($page == "category") {
             include_once("views/category.php");
         } elseif ($page == "add_category") {
@@ -42,15 +42,15 @@
             include_once("views/add_product.php");
         } elseif ($page == "search") {
             include_once("views/search.php");
+        } elseif ($page == "pronew") {
+            include_once("views/viewproduct.php");
         }
     } else {
         include_once("views/home.php");
     }
+    include_once("views/footer.php");
     ?>
 
-    <?php
-    include_once("views/footer.php")
-    ?>
 
 </body>
 

@@ -17,7 +17,7 @@ if (isset($_POST['dangky'])) {
 
     if ($result) {
         echo "Quá trình đăng ký thành công.";
-        echo '<meta http-equiv="refresh" content="0;URL=?page=index"/>';
+        echo '<meta http-equiv="refresh" content="0;URL=index.php"/>';
     } else
         echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='index.php'>Thử lại</a>";
 }

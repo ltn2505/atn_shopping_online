@@ -24,23 +24,35 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Hot sale</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?page=test">Customer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?page=category">Category</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?page=store">Store</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?page=product">Product</a>
-                    </li>
+
+                    <?php
+                    if (isset($_SESSION['user_name']) && $_SESSION['admin'] == 1) {
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?page=user">User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?page=category">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?page=store">Store</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?page=product">Product</a>
+                        </li>
+                    <?php
+                    } else {
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?page=pronew">Product New</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
+
+
                     <form class="form-inline" action="?page=search" method="POST">
-                        <input class="form-control mr-sm-2" type="text" name="txtSearch" placeholder="Search">
+                        <input style="width:400px" class="form-control mr-sm-2" type="text" name="txtSearch" placeholder="Search">
                         <button class="btn btn-success search" type="submit" name="search" style=" background-color: #e97a3a; border-color: #ffffff;">Search</button>
                     </form>
                 </ul>

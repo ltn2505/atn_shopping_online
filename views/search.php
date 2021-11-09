@@ -7,13 +7,13 @@ if (isset($_POST['search'])) {
     //Lấy dữ liệu từ file 
     $search   = $_POST['txtSearch'];
 
-    $result = pg_query($conn, "SELECT product_name,price,quantity,cate_id,image,description FROM public.product WHERE product_name LIKE '%{$search}%'");
+    $result = pg_query($conn, "SELECT product_name,price,quantity,cate_id,image,description FROM public.product 
+    WHERE product_name LIKE '%{$search}%'");
 
     if ($result) {
         echo "Search with keyword: $search";
-        //echo '<meta http-equiv="refresh" content="0;URL=?page=category"/>';
     } else
-        echo "Có lỗi xảy ra trong quá trình thêm mới. <a href='?page=add_category'>Again</a>";
+        echo "Có lỗi xảy ra trong quá trình tìm kiếm. <a href='?page=add_category'>Again</a>";
 }
 ?>
 
