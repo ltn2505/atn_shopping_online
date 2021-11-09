@@ -26,6 +26,7 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
 
     <body>
         <div class="container">
+            <h1>User Manage</h1>
             <table class="table table-striped table-hover">
                 <tr>
                     <th><strong>No.</strong></th>

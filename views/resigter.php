@@ -32,8 +32,9 @@ if (isset($_POST['dangky'])) {
 </head>
 
 <body>
-    <h1>Register</h1>
+
     <div class="container">
+        <h1>Register</h1>
         <form action="" method="POST">
             <div class="form-group">
                 <label for="exampleInputEmail1">User name</label>

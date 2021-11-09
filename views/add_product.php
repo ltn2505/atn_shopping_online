@@ -32,7 +32,7 @@ if (isset($_POST['btnAdd'])) {
 ?>
 
 <div class="container">
-    <h2>Adding new Product</h2>
+    <h2>Add new Product</h2>
 
     <form id="frmProduct" name="frmProduct" method="POST" enctype="multipart/form-data" action="" class="form-horizontal" role="form">
         <div class="form-group">

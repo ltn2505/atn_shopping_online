@@ -44,6 +44,7 @@ if (isset($_POST['dangnhap'])) {
 
 <body>
     <div class="container">
+        <h1>Login</h1>
         <form action="" method="POST">
             <div class="form-group">
                 <label for="exampleInput">User name</label>
