@@ -45,7 +45,7 @@ if (isset($_GET["function"]) == "del") {
                         <td><?php echo $row["cate_name"]; ?></td>
                         <td><?php echo $row["description"]; ?></td>
                         <td>
-                            <button><a href="">Edit</a></button>
+                            <button><a href="?page=update_category&&id=<?php echo $row["cate_id"]; ?>">Edit</a></button>
                             <button><a href="?page=category&&function=del&&id=<?php echo $row["cate_id"]; ?>" onClick="return confirm ('Are you sure delete')">Delete</a></button>
                         </td>
                     </tr>

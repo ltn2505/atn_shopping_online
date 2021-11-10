@@ -36,7 +36,7 @@
                      </p>
                      <p>
                      <div class="www">
-                         <a href="/resigter" class="text-reset">Resigter</a>
+                         <a href="/resigter" class="text-reset">Register</a>
                      </div>
 
                      </p>

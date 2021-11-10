@@ -44,6 +44,12 @@
             include_once("views/search.php");
         } elseif ($page == "pronew") {
             include_once("views/viewproduct.php");
+        } elseif ($page == "updateuser") {
+            include_once("views/updateuser.php");
+        } elseif ($page == "update_product") {
+            include_once("views/update_product.php");
+        } elseif ($page == "update_category") {
+            include_once("views/update_category.php");
         }
     } else {
         include_once("views/home.php");

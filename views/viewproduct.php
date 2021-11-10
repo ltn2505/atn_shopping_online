@@ -24,6 +24,7 @@ include_once("connect.php");
                     <th scope="col">Product Price</th>
                     <th scope="col">Product Image</th>
                     <th scope="col">Description</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>

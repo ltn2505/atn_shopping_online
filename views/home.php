@@ -18,7 +18,7 @@
                 <div class="col-sm-4 cot">
                     <?php
                     $id = 1;
-                    $result = pg_query($conn, "Select * from public.product ORDER BY price DESC LIMIT 2");
+                    $result = pg_query($conn, "Select * from public.product ORDER BY price ASC LIMIT 2");
                     while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
                     ?>
                         <img src="public/image/<?php echo $row["image"]; ?>">
@@ -32,7 +32,7 @@
                         <div class="slide-wrapper">
                             <?php
                             $id = 1;
-                            $result = pg_query($conn, "Select * from product ORDER BY price LIMIT 3");
+                            $result = pg_query($conn, "Select * from product ORDER BY price DESC LIMIT 3");
                             while ($row = pg_fetch_array($result, NULL, PGSQL_ASSOC)) {
                             ?>
                                 <div class="slide">

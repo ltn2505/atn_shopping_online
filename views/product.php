@@ -63,7 +63,7 @@ if (isset($_GET["function"]) == "del") {
                         <td><?php echo $row["description"]; ?></td>
                         <td><?php echo $row["product_date"]; ?></td>
                         <td>
-                            <button><a href="">Edit</a></button>
+                            <button><a href="?page=update_product&&id=<?php echo $row["product_id"]; ?>">Edit</a></button>
                             <button><a href="?page=product&&function=del&&id=<?php echo $row["product_id"]; ?>" onClick="return confirm ('Are you sure delete')">Delete</a></button>
                         </td>
                     </tr>

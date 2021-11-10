@@ -53,7 +53,6 @@ if (!isset($_SESSION['admin']) or $_SESSION['admin'] == 0) {
                             <td><?php echo $row["phone"]; ?></td>
                             <td><?php echo $row["address"]; ?></td>
                             <td>
-                                <button><a href="">Edit</a></button>
                                 <button><a href="?page=user&&function=del&&id=<?php echo $row["user_name"]; ?>" onClick="return confirm ('Are you sure delete')">Delete</a></button>
                             </td>
                         </tr>
