@@ -3,6 +3,9 @@
 $sql_category = "SELECT * FROM public.category";
 $query_category = pg_query($conn, $sql_category);
 
+$sql_store = "SELECT * FROM public.store";
+$query_store = pg_query($conn, $sql_store);
+
 // lấy dữ liệu
 if (isset($_POST['btnAdd'])) {
 
@@ -17,11 +20,12 @@ if (isset($_POST['btnAdd'])) {
     $procate      = $_POST['cate_id'];
     $proimage      = $_FILES['Image'];
     $description      = $_POST['txtShort'];
+    $prostore      = $_POST['store_id'];
 
     copy($proimage['tmp_name'], "public/image/" . $proimage['name']);
     $filePic = $proimage['name'];
-    $result = pg_query($conn, "INSERT INTO public.product(product_id,product_name,price,old_price,quantity,cate_id,image,description,product_date)
-    VALUES('{$proid}','{$proname}',{$price},{$oldprice},{$quantity},'{$procate}','{$filePic}','{$description}','" . date('Y-m-d H:i:s') . "')");
+    $result = pg_query($conn, "INSERT INTO public.product(product_id,product_name,price,old_price,quantity,cate_id,image,description,product_date,store_id)
+    VALUES('{$proid}','{$proname}',{$price},{$oldprice},{$quantity},'{$procate}','{$filePic}','{$description}','" . date('Y-m-d H:i:s') . "','{$prostore}')");
 
     if ($result) {
         echo "Quá trình thêm mới thành công.";
@@ -92,6 +96,18 @@ if (isset($_POST['btnAdd'])) {
             <label for="lblShort" class="col-sm-2 control-label">Short description(*): </label>
             <div class="col-sm-10">
                 <input type="text" name="txtShort" id="txtShort" class="form-control" placeholder="Short description" value='' />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">Product of store(*): </label>
+            <div class="col-sm-10">
+                <select class="form-control" name="store_id">
+                    <?php
+                    while ($row_store = pg_fetch_assoc($query_store)) { ?>
+                        <option value="<?php echo $row_store['store_id']; ?>"> <?php echo $row_store['store_address'] ?></option>}
+                    <?php } ?>
+                </select>
             </div>
         </div>
 

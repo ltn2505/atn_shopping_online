@@ -6,6 +6,9 @@ $id = $_GET['id'];
 $sql_category = "SELECT * FROM public.category";
 $query_category = pg_query($conn, $sql_category);
 
+$sql_store = "SELECT * FROM public.store";
+$query_store = pg_query($conn, $sql_store);
+
 $result = pg_query($conn, "SELECT* FROM public.product WHERE product_id='{$id}'");
 $row = pg_fetch_assoc($result);
 
@@ -23,6 +26,7 @@ if (isset($_POST['update'])) {
     $procate      = $_POST['cate_id'];
     $description      = $_POST['txtShort'];
     $proimage      = $_FILES['Image'];
+    $prostore      = $_POST['store_id'];
 
     if ($_FILES['Image'] == '') {
         $result = pg_query($conn, "UPDATE public.product 
@@ -109,6 +113,18 @@ if (isset($_POST['update'])) {
             <label for="lblShort" class="col-sm-2 control-label">Short description(*): </label>
             <div class="col-sm-10">
                 <input type="text" name="txtShort" id="txtShort" class="form-control" placeholder="Short description" value='<?php echo $row['description'] ?>' />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">Product of store(*): </label>
+            <div class="col-sm-10">
+                <select class="form-control" name="store_id">
+                    <?php
+                    while ($row_store = pg_fetch_assoc($query_store)) { ?>
+                        <option value="<?php echo $row_store['store_id']; ?>"> <?php echo $row_store['store_address'] ?></option>}
+                    <?php } ?>
+                </select>
             </div>
         </div>
 

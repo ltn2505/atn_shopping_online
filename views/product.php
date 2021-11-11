@@ -40,7 +40,8 @@ if (isset($_GET["function"]) == "del") {
                     <th scope="col">Product Image</th>
                     <th scope="col">Description</th>
                     <th scope="col">Product Added Date</th>
-                    <th scope="col"><a href="?page=add_product">Addnew Category</a></th>
+                    <th scope="col">Product of Store</th>
+                    <th scope="col"><a href="?page=add_product">Addnew Product</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -62,6 +63,7 @@ if (isset($_GET["function"]) == "del") {
                         </td>
                         <td><?php echo $row["description"]; ?></td>
                         <td><?php echo $row["product_date"]; ?></td>
+                        <td><?php echo $row["store_id"]; ?></td>
                         <td>
                             <button><a href="?page=update_product&&id=<?php echo $row["product_id"]; ?>">Edit</a></button>
                             <button><a href="?page=product&&function=del&&id=<?php echo $row["product_id"]; ?>" onClick="return confirm ('Are you sure delete')">Delete</a></button>

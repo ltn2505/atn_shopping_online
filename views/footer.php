@@ -31,18 +31,18 @@
                      </h6>
                      <p>
                      <div class="www">
-                         <a href="/" class="text-reset">Home</a>
+                         <a href="index.php" class="text-reset">Home</a>
                      </div>
                      </p>
                      <p>
                      <div class="www">
-                         <a href="/resigter" class="text-reset">Register</a>
+                         <a href="?pgae=resigter" class="text-reset">Register</a>
                      </div>
 
                      </p>
                      <p>
                      <div class="www">
-                         <a href="/login" class="text-reset">Login</a>
+                         <a href="?pgae=login" class="text-reset">Login</a>
                      </div>
 
                      </p>

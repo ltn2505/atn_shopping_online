@@ -3,5 +3,4 @@
 
     if(!$conn){
         die("Can not connect database");
-    } 
-?>
+    }
