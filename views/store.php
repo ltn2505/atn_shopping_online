@@ -1,3 +1,13 @@
+<?php
+include_once("connect.php");
+
+if (isset($_GET["function"]) == "del") {
+    if (isset($_GET["id"])) {
+        $id = $_GET["id"];
+        pg_query($conn, "delete from store where store_id='$id'");
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +28,7 @@
                     <th scope="col">Store ID</th>
                     <th scope="col">Store Address</th>
                     <th scope="col">Store Phone</th>
-                    <th scope="col"><a href="?page=add_store">Addnew Category</a></th>
+                    <th scope="col"><a href="?page=add_store">Addnew Store</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -32,8 +42,8 @@
                         <td><?php echo $row["store_address"]; ?></td>
                         <td><?php echo $row["store_phone"]; ?></td>
                         <td>
-                            <button><a href="">Edit</a></button>
-                            <button><a onClick="return confirm ('Are you sure delete')" a href="">Delete</a></button>
+                            <button><a href="?page=update_store&&id=<?php echo $row["store_id"]; ?>">Edit</a></button>
+                            <button><a href="?page=category&&function=del&&id=<?php echo $row["store_id"]; ?>" onClick="return confirm ('Are you sure delete')">Delete</a></button>
                         </td>
                     </tr>
                 <?php $id++;

@@ -50,6 +50,8 @@
             include_once("views/update_product.php");
         } elseif ($page == "update_category") {
             include_once("views/update_category.php");
+        } elseif ($page == "update_store") {
+            include_once("views/update_store.php");
         }
     } else {
         include_once("views/home.php");
