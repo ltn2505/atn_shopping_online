@@ -41,7 +41,7 @@ if (isset($_GET["function"]) == "del") {
                     <th scope="col">Description</th>
                     <th scope="col">Product Added Date</th>
                     <th scope="col">Product of Store</th>
-                    <th scope="col"><a href="?page=add_product">Addnew Product</a></th>
+                    <th scope="col"><button><a href="?page=add_product">Addnew Product</a></button></th>
                 </tr>
             </thead>
             <tbody>

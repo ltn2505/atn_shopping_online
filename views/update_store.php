@@ -25,7 +25,7 @@ if (isset($_POST['addnew'])) {
         echo "Quá trình cập nhật thành công.";
         echo '<meta http-equiv="refresh" content="0;URL=?page=store"/>';
     } else
-        echo "Có lỗi xảy ra trong quá trình cập nhật. <a href='?page=add_category'>Again</a>";
+        echo "Có lỗi xảy ra trong quá trình cập nhật. <a href='?page=store'>Again</a>";
 }
 ?>
 
